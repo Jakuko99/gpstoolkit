@@ -1,0 +1,15 @@
+{
+    "name": "gpstoolkit.jakub",
+    "description": "Toolkit containing tools for calculating maiden locator, simple compass navigation to coordinates and more",
+    "architecture": "@CLICK_ARCH@",
+    "title": "GPS Toolkit",
+    "hooks": {
+        "gpstoolkit": {
+            "apparmor": "gpstoolkit.apparmor",
+            "desktop":  "gpstoolkit.desktop"
+        }
+    },
+    "version": "@BUILD_VERSION@",
+    "maintainer": "Jakub Krsko <jakubkrs@outlook.sk>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
