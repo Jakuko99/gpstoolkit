@@ -17,6 +17,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.3
 import Ubuntu.Components 1.3 as Ubuntu
+import QtPositioning 5.2
 import QtQuick.Controls.Suru 2.2
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
@@ -90,6 +91,120 @@ ApplicationWindow {
                     }
                 }
             }
+        }
+
+        Column {
+            spacing: units.gu(1)
+            anchors {
+                margins: units.gu(2)
+                fill: parent
+            }
+
+            Row {
+                id: latRow
+                Layout.fillWidth: true
+                spacing: marginVal * 5
+
+                Column {
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignLeft
+                    Label {
+                        id: latLabel
+                        text: geoposition.position.coordinate.latitude || "No fix" + " º"
+                    }
+
+                    Label {
+                        text: "Latitude"
+                        //color: "blue"
+                        font.bold: true
+                    }
+                }
+
+                Column {
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignRight
+                    Label {
+                        id: lonLabel
+                        text: geoposition.position.coordinate.longitude || "No fix" + " º"
+                    }
+
+                    Label {
+                        text: "Longitude"
+                        //color: "blue"
+                        font.bold: true
+                    }
+                }
+            }
+
+            Row {
+                Label{
+                    text: "Accuracy (m): "
+                    font.bold: true
+                }
+                Label {
+                    text: "± " + geoposition.position.horizontalAccuracy || 'No fix'
+                }
+            }
+
+            Row{
+                Label{
+                    text: "Altitude (m): "
+                    font.bold: true
+                }
+                Label {
+                    text: geoposition.position.coordinate.altitude || 'No fix'
+                }
+            }
+
+            Row{
+                Label{
+                    text: "Speed (m/s): "
+                    font.bold: true
+                }
+                Label {
+                    text: geoposition.position.speed === -1 ? 'No fix' : geoposition.position.speed
+                }
+            }
+
+            RowField {
+                title: i18n.tr('Last updated')
+                text: geoposition.position.timestamp ? geoposition.position.timestamp : '—'
+            }
+
+            Row {
+                Label{
+                    text: "Current maiden locator: "
+                    font.bold: true
+                }
+                Label {
+                    id: maidenLabel
+                    text: function(){
+                        if (latLabel !== "No fix"){
+                            python.call("maiden.to_maiden", [geoposition.position.coordinate.longitude, geoposition.position.coordinate.latitude], function(returnVal){
+                                maidenLabel.text = returnVal
+                            });
+                        }
+                    }
+                }
+            }
+
+            PositionSource {
+                id: geoposition
+                active: true
+                preferredPositioningMethods: PositionSource.SatellitePositioningMethods
+            }
+        }
+    }
+    Python {
+        id: python
+
+        Component.onCompleted: {
+            addImportPath(Qt.resolvedUrl('../src/'));
+            importModule('maiden', function() {
+            });
+        }
+        onError: {
+            console.log('python error: ' + traceback);
         }
     }
 }

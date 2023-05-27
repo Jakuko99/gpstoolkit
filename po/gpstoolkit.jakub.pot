@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-26 18:38+0200\n"
+"POT-Creation-Date: 2023-05-27 11:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: gpstoolkit.desktop.in.h:1
+#: ../qml/Main.qml:170
+msgid "Last updated"
+msgstr ""
+
+#: ../qml/aboutPage.qml:69 gpstoolkit.desktop.in.h:1
 msgid "GPS Toolkit"
+msgstr ""
+
+#: ../qml/aboutPage.qml:80
+msgid "Version %1"
 msgstr ""
