@@ -17,7 +17,7 @@ Page {
                 onClicked: stack.pop()
             }
             Label {
-                text: "All trains"
+                text: i18n.tr("Maiden locator")
                 elide: Label.ElideRight
                 horizontalAlignment: Qt.AlignHCenter
                 verticalAlignment: Qt.AlignVCenter

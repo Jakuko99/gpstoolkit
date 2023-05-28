@@ -7,30 +7,33 @@ def to_maiden(lat: float, lon: float = None, precision: int = 3):
         precision : int, optional
             level of precision (length of maidenhead grid string output)
     """
-    A = ord("A")
-    a = divmod(lon + 180, 20)
-    b = divmod(lat + 90, 10)
-    maiden = chr(A + int(a[0])) + chr(A + int(b[0]))
-    lon = a[1] / 2.0
-    lat = b[1]
-    i = 1
-    while i < precision:
-        i += 1
-        a = divmod(lon, 1)
-        b = divmod(lat, 1)
-        if not (i % 2):
-            maiden += str(int(a[0])) + str(int(b[0]))
-            lon = 24 * a[1]
-            lat = 24 * b[1]
-        else:
-            maiden += chr(A + int(a[0])) + chr(A + int(b[0]))
-            lon = 10 * a[1]
-            lat = 10 * b[1]
+    try:
+        A = ord("A")
+        a = divmod(lon + 180, 20)
+        b = divmod(lat + 90, 10)
+        maiden = chr(A + int(a[0])) + chr(A + int(b[0]))
+        lon = a[1] / 2.0
+        lat = b[1]
+        i = 1
+        while i < precision:
+            i += 1
+            a = divmod(lon, 1)
+            b = divmod(lat, 1)
+            if not (i % 2):
+                maiden += str(int(a[0])) + str(int(b[0]))
+                lon = 24 * a[1]
+                lat = 24 * b[1]
+            else:
+                maiden += chr(A + int(a[0])) + chr(A + int(b[0]))
+                lon = 10 * a[1]
+                lat = 10 * b[1]
 
-    if len(maiden) >= 6:
-        maiden = maiden[:4] + maiden[4:6].lower() + maiden[6:]
+        if len(maiden) >= 6:
+            maiden = maiden[:4] + maiden[4:6].lower() + maiden[6:]
 
-    return maiden
+        return maiden
+    except (TypeError, ValueError):
+    	return "-"
 
 def to_location(maiden: str, center: bool = True):
     maiden = maiden.strip().upper()

@@ -34,12 +34,27 @@ ApplicationWindow {
 
     Component.onCompleted: function(){
         Qt.application.name = "gpstoolkit.jakub";
+        locTimer.running = true;
     }
+
+    Component.onDestruction: locTimer.running = false; // stop timer when closing page
 
     StackView{
         id: stack
         initialItem: mainPage
         anchors.fill: parent
+    }
+
+    Timer { // timer for updating maiden locator every 2.5 seconds
+        id: locTimer
+        interval: 2500
+        repeat: true
+        triggeredOnStart: true
+        onTriggered: {
+            python.call("maiden.to_maiden", [geoposition.position.coordinate.longitude, geoposition.position.coordinate.latitude], function(returnVal){
+                maidenLabel.text = returnVal;
+            });
+        }
     }
 
     Page {
@@ -73,19 +88,19 @@ ApplicationWindow {
                         y: parent.height
 
                         MenuItem {
-                            text: "Maiden locator"
-                            onTriggered: stack.push(Qt.resolvedUrl("allTrains.qml"))
+                            text: i18n.tr("Maiden locator")
+                            onTriggered: stack.push(Qt.resolvedUrl("maiden_locator.qml"))
                         }
                         MenuItem {
-                            text: "Compass navigation"
-                            onTriggered: stack.push(Qt.resolvedUrl("watchedTrains.qml"))
+                            text: i18n.tr("Compass navigation")
+                            onTriggered: stack.push(Qt.resolvedUrl("compass_page.qml"))
                         }
                         MenuItem {
-                            text: "Map"
+                            text: i18n.tr("Map")
                             onTriggered: stack.push(Qt.resolvedUrl("optionsPage.qml"))
                         }
                         MenuItem {
-                            text: "About"
+                            text: i18n.tr("About")
                             onTriggered: stack.push(Qt.resolvedUrl("aboutPage.qml"))
                         }
                     }
@@ -111,11 +126,13 @@ ApplicationWindow {
                     Label {
                         id: latLabel
                         text: geoposition.position.coordinate.latitude || "No fix" + " º"
+                        font.pointSize: 40
                     }
 
                     Label {
-                        text: "Latitude"
+                        text: i18n.tr("Latitude")
                         //color: "blue"
+                        font.pointSize: 20
                         font.bold: true
                     }
                 }
@@ -126,11 +143,13 @@ ApplicationWindow {
                     Label {
                         id: lonLabel
                         text: geoposition.position.coordinate.longitude || "No fix" + " º"
+                        font.pointSize: 40
                     }
 
                     Label {
-                        text: "Longitude"
+                        text: i18n.tr("Longitude")
                         //color: "blue"
+                        font.pointSize: 20
                         font.bold: true
                     }
                 }
@@ -138,7 +157,7 @@ ApplicationWindow {
 
             Row {
                 Label{
-                    text: "Accuracy (m): "
+                    text: i18n.tr("Accuracy (m): ")
                     font.bold: true
                 }
                 Label {
@@ -148,7 +167,7 @@ ApplicationWindow {
 
             Row{
                 Label{
-                    text: "Altitude (m): "
+                    text: i18n.tr("Altitude (m): ")
                     font.bold: true
                 }
                 Label {
@@ -158,7 +177,7 @@ ApplicationWindow {
 
             Row{
                 Label{
-                    text: "Speed (m/s): "
+                    text: i18n.tr("Speed (m/s): ")
                     font.bold: true
                 }
                 Label {
@@ -173,18 +192,11 @@ ApplicationWindow {
 
             Row {
                 Label{
-                    text: "Current maiden locator: "
+                    text: i18n.tr("Current maiden locator: ")
                     font.bold: true
                 }
                 Label {
                     id: maidenLabel
-                    text: function(){
-                        if (latLabel !== "No fix"){
-                            python.call("maiden.to_maiden", [geoposition.position.coordinate.longitude, geoposition.position.coordinate.latitude], function(returnVal){
-                                maidenLabel.text = returnVal
-                            });
-                        }
-                    }
                 }
             }
 
