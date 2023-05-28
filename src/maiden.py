@@ -31,7 +31,7 @@ def to_maiden(lat: float, lon: float = None, precision: int = 3):
         if len(maiden) >= 6:
             maiden = maiden[:4] + maiden[4:6].lower() + maiden[6:]
 
-        return maiden
+        return maiden.upper()
     except (TypeError, ValueError):
     	return "-"
 

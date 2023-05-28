@@ -51,7 +51,7 @@ ApplicationWindow {
         repeat: true
         triggeredOnStart: true
         onTriggered: {
-            python.call("maiden.to_maiden", [geoposition.position.coordinate.longitude, geoposition.position.coordinate.latitude], function(returnVal){
+            python.call("maiden.to_maiden", [geoposition.position.coordinate.latitude, geoposition.position.coordinate.longitude], function(returnVal){
                 maidenLabel.text = returnVal;
             });
         }
@@ -126,13 +126,13 @@ ApplicationWindow {
                     Label {
                         id: latLabel
                         text: geoposition.position.coordinate.latitude || "No fix" + " º"
-                        font.pointSize: 40
+                        font.pointSize: 50
                     }
 
                     Label {
                         text: i18n.tr("Latitude")
                         //color: "blue"
-                        font.pointSize: 20
+                        font.pointSize: 25
                         font.bold: true
                     }
                 }
@@ -143,35 +143,33 @@ ApplicationWindow {
                     Label {
                         id: lonLabel
                         text: geoposition.position.coordinate.longitude || "No fix" + " º"
-                        font.pointSize: 40
+                        font.pointSize: 50
                     }
 
                     Label {
                         text: i18n.tr("Longitude")
                         //color: "blue"
-                        font.pointSize: 20
+                        font.pointSize: 25
                         font.bold: true
                     }
                 }
             }
 
             Row {
-                Label{
-                    text: i18n.tr("Accuracy (m): ")
-                    font.bold: true
-                }
-                Label {
-                    text: "± " + geoposition.position.horizontalAccuracy || 'No fix'
-                }
-            }
-
-            Row{
+                spacing: marginVal
                 Label{
                     text: i18n.tr("Altitude (m): ")
                     font.bold: true
                 }
                 Label {
                     text: geoposition.position.coordinate.altitude || 'No fix'
+                }
+                Label{
+                    text: i18n.tr("Accuracy (m): ")
+                    font.bold: true
+                }
+                Label {
+                    text: "± " + geoposition.position.horizontalAccuracy || 'No fix'
                 }
             }
 
@@ -185,11 +183,6 @@ ApplicationWindow {
                 }
             }
 
-            RowField {
-                title: i18n.tr('Last updated')
-                text: geoposition.position.timestamp ? geoposition.position.timestamp : '—'
-            }
-
             Row {
                 Label{
                     text: i18n.tr("Current maiden locator: ")
@@ -197,6 +190,16 @@ ApplicationWindow {
                 }
                 Label {
                     id: maidenLabel
+                }
+            }
+
+            Row {
+                Label{
+                    text: i18n.tr("Last updated: ")
+                    font.bold: true
+                }
+                Label{
+                    text: geoposition.position.timestamp ? geoposition.position.timestamp : '—'
                 }
             }
 

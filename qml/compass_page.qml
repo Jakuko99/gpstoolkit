@@ -53,7 +53,9 @@ Page {
 
     Text {
         width: parent.width
-        anchors.top: compassHeader.bottom
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
         horizontalAlignment: Text.AlignHCenter
         id: locText
         text: "Loc Test"
@@ -63,19 +65,12 @@ Page {
     Text {
         width: parent.width
         anchors.top: locText.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
         horizontalAlignment: Text.AlignHCenter
         id: dtsText
         text: "DTS Test"
         font.pixelSize: units.gu(3)
-    }
-
-    Rectangle {
-        id: sepRect
-        width: parent.width
-        height: units.gu(1) / 4
-        color: "#666666"
-        anchors.top: dtsText.bottom
-        anchors.margins: units.gu(1) / 3
     }
 
     Text {
@@ -108,6 +103,8 @@ Page {
         width: parent.width
         horizontalAlignment: Text.AlignHCenter
         anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
         id: curlocText
         text: "curloc Test"
         font.pixelSize: units.gu(3)

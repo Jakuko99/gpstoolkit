@@ -91,7 +91,7 @@ Page {
             anchors.rightMargin: marginVal
             anchors.leftMargin: marginVal
             anchors.right: parent.right
-            text: "Get the source"
+            text: i18n.tr("Get the source")
             onClicked: Qt.openUrlExternally("https://github.com/Jakuko99/gpstoolkit")
         }
 
@@ -100,7 +100,7 @@ Page {
             anchors.right: parent.right
             anchors.rightMargin: marginVal
             anchors.leftMargin: marginVal
-            text: " Report issues  "
+            text: i18n.tr("Report issues")
             onClicked: Qt.openUrlExternally("https://github.com/Jakuko99/gpstoolkit/issues")
         }
     }

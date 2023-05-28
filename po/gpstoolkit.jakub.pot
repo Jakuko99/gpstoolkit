@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-28 07:06+0000\n"
+"POT-Creation-Date: 2023-05-28 09:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,24 +41,24 @@ msgstr ""
 msgid "Longitude"
 msgstr ""
 
-#: ../qml/Main.qml:160
-msgid "Accuracy (m): "
-msgstr ""
-
-#: ../qml/Main.qml:170
+#: ../qml/Main.qml:161
 msgid "Altitude (m): "
 msgstr ""
 
-#: ../qml/Main.qml:180
+#: ../qml/Main.qml:168
+msgid "Accuracy (m): "
+msgstr ""
+
+#: ../qml/Main.qml:178
 msgid "Speed (m/s): "
 msgstr ""
 
-#: ../qml/Main.qml:189
-msgid "Last updated"
+#: ../qml/Main.qml:188
+msgid "Current maiden locator: "
 msgstr ""
 
-#: ../qml/Main.qml:195
-msgid "Current maiden locator: "
+#: ../qml/Main.qml:198
+msgid "Last updated: "
 msgstr ""
 
 #: ../qml/aboutPage.qml:69 gpstoolkit.desktop.in.h:1
@@ -67,6 +67,14 @@ msgstr ""
 
 #: ../qml/aboutPage.qml:80
 msgid "Version %1"
+msgstr ""
+
+#: ../qml/aboutPage.qml:94
+msgid "Get the source"
+msgstr ""
+
+#: ../qml/aboutPage.qml:103
+msgid "Report issues"
 msgstr ""
 
 #: ../qml/compass_page.qml:23
