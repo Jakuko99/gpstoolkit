@@ -5,16 +5,19 @@ import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtSensors 5.9
-import QtSensors 5.9 as Sensors
+//import QtSensors 5.9 as Sensors
 import Ubuntu.Components 1.3
 
 Page {
     id: compassPage
+    property real marginVal: units.gu(1)
 
     header: ToolBar {
-        id: compassHeader
+        id: toolbar
+
         RowLayout {
             anchors.fill: parent
+
             ToolButton {
                 text: qsTr("‹")
                 onClicked: stack.pop()
@@ -40,10 +43,6 @@ Page {
                         text: i18n.tr("Set position")
                         onTriggered: contentTrainList.model.clear()
                     }
-                    MenuItem{
-                        text: i18n.tr('Settings')
-                        onTriggered: settingsDialog.open()
-                    }
                 }
             }
         }
@@ -51,44 +50,39 @@ Page {
 
     property var coord1
 
-    Text {
-        width: parent.width
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        horizontalAlignment: Text.AlignHCenter
-        id: locText
-        text: "Loc Test"
-        font.pixelSize: units.gu(3)
-    }
+    Column {
+        Layout.alignment: Qt.AlignHCenter
+        anchors.fill: parent
 
-    Text {
-        width: parent.width
-        anchors.top: locText.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        horizontalAlignment: Text.AlignHCenter
-        id: dtsText
-        text: "DTS Test"
-        font.pixelSize: units.gu(3)
-    }
+        Label{
+            //horizontalAlignment: Qt.AlignCenter
+            id: locText
+            text: "Loc Test"
+            font.pixelSize: units.gu(3)
+        }
 
-    Text {
-        horizontalAlignment: Text.AlignLeft
-        anchors.top: sepRect.bottom
-        anchors.left: parent.left
-        id: degreeText
-        text: "degree Test"
-        font.pixelSize: units.gu(5)
-    }
+        Label {
+            horizontalAlignment: Qt.AlignCenter
+            id: dtsText
+            text: "DTS Test"
+            font.pixelSize: units.gu(3)
+        }
 
-    Text {
-        horizontalAlignment: Text.AlignRight
-        anchors.top: sepRect.bottom
-        anchors.right: parent.right
-        id: distanceText
-        text: "dist Test"
-        font.pixelSize: units.gu(5)
+        Row {
+            Label {
+                horizontalAlignment: Qt.AlignLeft
+                id: degreeText
+                text: "degree Test"
+                font.pixelSize: units.gu(5)
+            }
+
+            Label {
+                horizontalAlignment: Qt.AlignRight
+                id: distanceText
+                text: "dist Test"
+                font.pixelSize: units.gu(5)
+            }
+        }
     }
 
     CompassUi {
@@ -99,7 +93,7 @@ Page {
         height: units.gu(40)
     }
 
-    Text {
+    Label {
         width: parent.width
         horizontalAlignment: Text.AlignHCenter
         anchors.bottom: parent.bottom
@@ -147,7 +141,7 @@ Page {
     }
 
     Component.onCompleted: {
-        var types = Sensors.QmlSensors.sensorTypes()
+        var types = QmlSensors.sensorTypes()
         console.log(types.join(", "))
     }
 

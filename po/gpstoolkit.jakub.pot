@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-28 09:26+0000\n"
+"POT-Creation-Date: 2023-05-28 14:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,47 +17,47 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:91 ../qml/maiden_locator.qml:20
+#: ../qml/Main.qml:95 ../qml/maiden_locator.qml:20
 msgid "Maiden locator"
 msgstr ""
 
-#: ../qml/Main.qml:95
+#: ../qml/Main.qml:99
 msgid "Compass navigation"
 msgstr ""
 
-#: ../qml/Main.qml:99
+#: ../qml/Main.qml:103
 msgid "Map"
 msgstr ""
 
-#: ../qml/Main.qml:103
+#: ../qml/Main.qml:107
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:133
+#: ../qml/Main.qml:137
 msgid "Latitude"
 msgstr ""
 
-#: ../qml/Main.qml:150
+#: ../qml/Main.qml:153
 msgid "Longitude"
 msgstr ""
 
-#: ../qml/Main.qml:161
-msgid "Altitude (m): "
+#: ../qml/Main.qml:163
+msgid "Altitude: "
 msgstr ""
 
-#: ../qml/Main.qml:168
-msgid "Accuracy (m): "
+#: ../qml/Main.qml:171
+msgid "Accuracy: "
 msgstr ""
 
-#: ../qml/Main.qml:178
+#: ../qml/Main.qml:182
 msgid "Speed (m/s): "
 msgstr ""
 
-#: ../qml/Main.qml:188
+#: ../qml/Main.qml:192
 msgid "Current maiden locator: "
 msgstr ""
 
-#: ../qml/Main.qml:198
+#: ../qml/Main.qml:202
 msgid "Last updated: "
 msgstr ""
 
@@ -77,14 +77,18 @@ msgstr ""
 msgid "Report issues"
 msgstr ""
 
-#: ../qml/compass_page.qml:23
+#: ../qml/compass_page.qml:26
 msgid "Compass"
 msgstr ""
 
-#: ../qml/compass_page.qml:40
+#: ../qml/compass_page.qml:43
 msgid "Set position"
 msgstr ""
 
-#: ../qml/compass_page.qml:44
-msgid "Settings"
+#: ../qml/maiden_locator.qml:61
+msgid "Enter value..."
+msgstr ""
+
+#: ../qml/maiden_locator.qml:66
+msgid "Convert"
 msgstr ""

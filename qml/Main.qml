@@ -45,6 +45,10 @@ ApplicationWindow {
         anchors.fill: parent
     }
 
+    function roundNumber(num, dec) {
+        return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+    }
+
     Timer { // timer for updating maiden locator every 2.5 seconds
         id: locTimer
         interval: 2500
@@ -125,14 +129,13 @@ ApplicationWindow {
                     Layout.alignment: Qt.AlignLeft
                     Label {
                         id: latLabel
-                        text: geoposition.position.coordinate.latitude || "No fix" + " º"
-                        font.pointSize: 50
+                        text: roundNumber(geoposition.position.coordinate.latitude, 6)  + " º"
+                        font.pointSize: marginVal * 3
                     }
 
                     Label {
                         text: i18n.tr("Latitude")
-                        //color: "blue"
-                        font.pointSize: 25
+                        //color: "blue"                        
                         font.bold: true
                     }
                 }
@@ -142,34 +145,35 @@ ApplicationWindow {
                     Layout.alignment: Qt.AlignRight
                     Label {
                         id: lonLabel
-                        text: geoposition.position.coordinate.longitude || "No fix" + " º"
-                        font.pointSize: 50
+                        text: roundNumber(geoposition.position.coordinate.longitude,6) + " º"
+                        font.pointSize: marginVal * 3
                     }
 
                     Label {
                         text: i18n.tr("Longitude")
-                        //color: "blue"
-                        font.pointSize: 25
+                        //color: "blue"                        
                         font.bold: true
                     }
                 }
             }
 
             Row {
-                spacing: marginVal
+                spacing: marginVal * 2
                 Label{
-                    text: i18n.tr("Altitude (m): ")
+                    text: i18n.tr("Altitude: ")
                     font.bold: true
                 }
                 Label {
-                    text: geoposition.position.coordinate.altitude || 'No fix'
+                    text: roundNumber(geoposition.position.coordinate.altitude, 1) + " m"
                 }
+
                 Label{
-                    text: i18n.tr("Accuracy (m): ")
+                    text: i18n.tr("Accuracy: ")
                     font.bold: true
                 }
+
                 Label {
-                    text: "± " + geoposition.position.horizontalAccuracy || 'No fix'
+                    text: "± " + roundNumber(geoposition.position.horizontalAccuracy, 1) + " m"
                 }
             }
 
@@ -179,7 +183,7 @@ ApplicationWindow {
                     font.bold: true
                 }
                 Label {
-                    text: geoposition.position.speed === -1 ? 'No fix' : geoposition.position.speed
+                    text: geoposition.position.speed === -1 ? 'No fix' : roundNumber(geoposition.position.speed, 1)
                 }
             }
 

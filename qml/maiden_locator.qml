@@ -46,5 +46,25 @@ Page {
         }
     }
 
+    Column{
+        anchors {
+            margins: units.gu(2)
+            fill: parent
+        }
+        spacing: marginVal
 
+        Row {
+            spacing: marginVal
+
+            TextField {
+                id: entryField
+                placeholderText: i18n.tr("Enter value...")
+            }
+
+            Button {
+                id: enterButton
+                text: i18n.tr("Convert")
+            }
+        }
+    }
 }
