@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-28 14:13+0000\n"
+"POT-Creation-Date: 2023-05-29 12:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:95 ../qml/maiden_locator.qml:20
+#: ../qml/Main.qml:95 ../qml/maiden_locator.qml:41
 msgid "Maiden locator"
 msgstr ""
 
@@ -33,31 +33,31 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:137
+#: ../qml/Main.qml:136
 msgid "Latitude"
 msgstr ""
 
-#: ../qml/Main.qml:153
+#: ../qml/Main.qml:151
 msgid "Longitude"
 msgstr ""
 
-#: ../qml/Main.qml:163
-msgid "Altitude: "
+#: ../qml/Main.qml:164
+msgid "Altitude"
 msgstr ""
 
-#: ../qml/Main.qml:171
-msgid "Accuracy: "
+#: ../qml/Main.qml:176
+msgid "Accuracy"
 msgstr ""
 
-#: ../qml/Main.qml:182
-msgid "Speed (m/s): "
+#: ../qml/Main.qml:188
+msgid "Speed"
 msgstr ""
 
-#: ../qml/Main.qml:192
-msgid "Current maiden locator: "
+#: ../qml/Main.qml:200 ../qml/maiden_locator.qml:110
+msgid "QTH Locator"
 msgstr ""
 
-#: ../qml/Main.qml:202
+#: ../qml/Main.qml:212
 msgid "Last updated: "
 msgstr ""
 
@@ -85,10 +85,42 @@ msgstr ""
 msgid "Set position"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:61
-msgid "Enter value..."
+#: ../qml/maiden_locator.qml:86
+msgid "Decimal"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:66
-msgid "Convert"
+#: ../qml/maiden_locator.qml:98
+msgid "Sexagesimal"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:146 ../qml/maiden_locator.qml:226
+msgid "Lat:"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:163 ../qml/maiden_locator.qml:294
+msgid "Long:"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:178 ../qml/maiden_locator.qml:361
+msgid "Convert to QTH Locator"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:205 ../qml/maiden_locator.qml:415
+msgid "QTH Locator:"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:440
+msgid "QTH:"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:454
+msgid "Convert to coordinates"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:472
+msgid "Latitude:"
+msgstr ""
+
+#: ../qml/maiden_locator.qml:483
+msgid "Longitude:"
 msgstr ""

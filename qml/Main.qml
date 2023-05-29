@@ -112,108 +112,118 @@ ApplicationWindow {
             }
         }
 
-        Column {
-            spacing: units.gu(1)
+        Grid{
+            id: contentGrid
+            columns: 2
+            columnSpacing: marginVal * 2.5
+            spacing: marginVal
             anchors {
                 margins: units.gu(2)
-                fill: parent
+                left: parent.left
+                right: parent.right
+                top: parent.top
             }
 
-            Row {
-                id: latRow
-                Layout.fillWidth: true
-                spacing: marginVal * 5
-
-                Column {
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignLeft
-                    Label {
-                        id: latLabel
-                        text: roundNumber(geoposition.position.coordinate.latitude, 6)  + " º"
-                        font.pointSize: marginVal * 3
-                    }
-
-                    Label {
-                        text: i18n.tr("Latitude")
-                        //color: "blue"                        
-                        font.bold: true
-                    }
+            Column {
+                //                Layout.fillWidth: true
+                Label {
+                    id: latLabel
+                    text: roundNumber(geoposition.position.coordinate.latitude, 5)  + "º"
+                    font.pointSize: marginVal * 3
                 }
 
-                Column {
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignRight
-                    Label {
-                        id: lonLabel
-                        text: roundNumber(geoposition.position.coordinate.longitude,6) + " º"
-                        font.pointSize: marginVal * 3
-                    }
-
-                    Label {
-                        text: i18n.tr("Longitude")
-                        //color: "blue"                        
-                        font.bold: true
-                    }
-                }
-            }
-
-            Row {
-                spacing: marginVal * 2
-                Label{
-                    text: i18n.tr("Altitude: ")
+                Label {
+                    text: i18n.tr("Latitude")
+                    //color: "blue"
                     font.bold: true
                 }
+            }
+
+            Column {
+                //                Layout.fillWidth: true
+                Label {
+                    id: lonLabel
+                    text: roundNumber(geoposition.position.coordinate.longitude,5) + "º"
+                    font.pointSize: marginVal * 3
+                }
+
+                Label {
+                    text: i18n.tr("Longitude")
+                    //color: "blue"
+                    font.bold: true
+                }
+            }
+
+            Column {
                 Label {
                     text: roundNumber(geoposition.position.coordinate.altitude, 1) + " m"
+                    font.pointSize: marginVal * 3
                 }
 
                 Label{
-                    text: i18n.tr("Accuracy: ")
+                    text: i18n.tr("Altitude")
                     font.bold: true
                 }
+            }
 
+            Column {
                 Label {
                     text: "± " + roundNumber(geoposition.position.horizontalAccuracy, 1) + " m"
+                    font.pointSize: marginVal * 3
+                }
+
+                Label{
+                    text: i18n.tr("Accuracy")
+                    font.bold: true
                 }
             }
 
-            Row{
-                Label{
-                    text: i18n.tr("Speed (m/s): ")
-                    font.bold: true
-                }
+            Column {
                 Label {
-                    text: geoposition.position.speed === -1 ? 'No fix' : roundNumber(geoposition.position.speed, 1)
+                    text: geoposition.position.speed === -1 ? 'No fix' : roundNumber(geoposition.position.speed, 1) + " m/s"
+                    font.pointSize: marginVal * 3
+                }
+
+                Label{
+                    text: i18n.tr("Speed")
+                    font.bold: true
                 }
             }
 
-            Row {
-                Label{
-                    text: i18n.tr("Current maiden locator: ")
-                    font.bold: true
-                }
+            Column {
                 Label {
                     id: maidenLabel
+                    font.pointSize: marginVal * 3
                 }
-            }
 
-            Row {
                 Label{
-                    text: i18n.tr("Last updated: ")
+                    text: i18n.tr("QTH Locator")
                     font.bold: true
                 }
-                Label{
-                    text: geoposition.position.timestamp ? geoposition.position.timestamp : '—'
-                }
-            }
-
-            PositionSource {
-                id: geoposition
-                active: true
-                preferredPositioningMethods: PositionSource.SatellitePositioningMethods
             }
         }
+
+        Row {
+            anchors.top: contentGrid.bottom
+            anchors.topMargin: marginVal
+            anchors.leftMargin: marginVal
+            anchors.left: parent.left
+            Label{
+                text: i18n.tr("Last updated: ")
+                font.bold: true
+            }
+            Label{
+                text: geoposition.position.timestamp ? geoposition.position.timestamp : '—'
+            }
+        }
+
+        PositionSource {
+            id: geoposition
+            active: true
+            preferredPositioningMethods: PositionSource.SatellitePositioningMethods
+        }
     }
+
     Python {
         id: python
 
