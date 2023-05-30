@@ -92,7 +92,7 @@ ApplicationWindow {
                         y: parent.height
 
                         MenuItem {
-                            text: i18n.tr("Maiden locator")
+                            text: i18n.tr("QTH Locator")
                             onTriggered: stack.push(Qt.resolvedUrl("maiden_locator.qml"))
                         }
                         MenuItem {
@@ -101,7 +101,7 @@ ApplicationWindow {
                         }
                         MenuItem {
                             text: i18n.tr("Map")
-                            onTriggered: stack.push(Qt.resolvedUrl("optionsPage.qml"))
+                            onTriggered: stack.push(Qt.resolvedUrl("map_page.qml"))
                         }
                         MenuItem {
                             text: i18n.tr("About")
@@ -180,7 +180,7 @@ ApplicationWindow {
 
             Column {
                 Label {
-                    text: geoposition.position.speed === -1 ? 'No fix' : roundNumber(geoposition.position.speed, 1) + " m/s"
+                    text: roundNumber(geoposition.position.speed * 3.6, 1) + " km/h"
                     font.pointSize: marginVal * 3
                 }
 

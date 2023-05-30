@@ -1,6 +1,5 @@
 import QtQuick 2.6
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
 import Qt.labs.settings 1.0
@@ -38,7 +37,7 @@ Page {
                 onClicked: stack.pop()
             }
             Label {
-                text: i18n.tr("Maiden locator")
+                text: i18n.tr("Maidenhead (QTH) Locator")
                 elide: Label.ElideRight
                 horizontalAlignment: Qt.AlignHCenter
                 verticalAlignment: Qt.AlignVCenter
@@ -46,23 +45,23 @@ Page {
             }
             ToolButton {
                 text: qsTr(" ")
-//                onClicked: optionsMenu.open()
+                //                onClicked: optionsMenu.open()
 
-//                Menu {
-//                    id: optionsMenu
-//                    transformOrigin: Menu.TopRight
-//                    x: parent.width - width
-//                    y: parent.height
+                //                Menu {
+                //                    id: optionsMenu
+                //                    transformOrigin: Menu.TopRight
+                //                    x: parent.width - width
+                //                    y: parent.height
 
-//                    MenuItem {
-//                        text: "Clear list"
-//                        onTriggered: contentTrainList.model.clear()
-//                    }
-//                    MenuItem{
-//                        text: 'Settings'
-//                        onTriggered: settingsDialog.open()
-//                    }
-//                }
+                //                    MenuItem {
+                //                        text: "Clear list"
+                //                        onTriggered: contentTrainList.model.clear()
+                //                    }
+                //                    MenuItem{
+                //                        text: 'Settings'
+                //                        onTriggered: settingsDialog.open()
+                //                    }
+                //                }
             }
         }
     }

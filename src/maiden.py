@@ -1,3 +1,5 @@
+import haversine
+
 def to_maiden(lat: float, lon: float = None, precision: int = 3):
     """
         lat : float or tuple of float
@@ -72,3 +74,10 @@ def to_location(maiden: str, center: bool = True):
             lat += 2.5 / 600 / 2
 
     return lat, lon
+
+def distance_between_qth(loc1, loc2):
+    lat1, lon1 = to_location(loc1)
+    lat2, lon2 = to_location(loc2)
+
+    dist = haversine.calculate_distance(lat1, lon1, lat2, lon2)
+    return dist
