@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 10:54+0000\n"
+"POT-Creation-Date: 2023-05-31 13:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "QTH Locator"
 msgstr ""
 
-#: ../qml/Main.qml:99 ../qml/compass_page.qml:41 ../qml/compass_page_old.qml:36
+#: ../qml/Main.qml:99 ../qml/compass_page.qml:41
 msgid "Compass navigation"
 msgstr ""
 
@@ -33,13 +33,11 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:136 ../qml/compass_page.qml:193
-#: ../qml/compass_page_old.qml:191
+#: ../qml/Main.qml:136 ../qml/compass_page.qml:239
 msgid "Latitude"
 msgstr ""
 
-#: ../qml/Main.qml:151 ../qml/compass_page.qml:208
-#: ../qml/compass_page_old.qml:206
+#: ../qml/Main.qml:151 ../qml/compass_page.qml:254
 msgid "Longitude"
 msgstr ""
 
@@ -75,23 +73,47 @@ msgstr ""
 msgid "Report issues"
 msgstr ""
 
-#: ../qml/compass_page.qml:58 ../qml/compass_page_old.qml:53
+#: ../qml/compass_page.qml:58
 msgid "Set position"
 msgstr ""
 
-#: ../qml/compass_page.qml:171 ../qml/compass_page_old.qml:169
+#: ../qml/compass_page.qml:86
+msgid "Destination latitude"
+msgstr ""
+
+#: ../qml/compass_page.qml:99
+msgid "Destination longitude"
+msgstr ""
+
+#: ../qml/compass_page.qml:112
+msgid "Destination azimuth"
+msgstr ""
+
+#: ../qml/compass_page.qml:125
+msgid "Destination distance"
+msgstr ""
+
+#: ../qml/compass_page.qml:138
+msgid "Current latitude"
+msgstr ""
+
+#: ../qml/compass_page.qml:152
+msgid "Current longitude"
+msgstr ""
+
+#: ../qml/compass_page.qml:217
 msgid "Set destination"
 msgstr ""
 
-#: ../qml/compass_page.qml:178 ../qml/compass_page_old.qml:176
+#: ../qml/compass_page.qml:224
 msgid "Set"
 msgstr ""
 
-#: ../qml/compass_page.qml:188 ../qml/compass_page_old.qml:186
+#: ../qml/compass_page.qml:234
 msgid "Lat: "
 msgstr ""
 
-#: ../qml/compass_page.qml:202 ../qml/compass_page_old.qml:200
+#: ../qml/compass_page.qml:248
 msgid "Lng:"
 msgstr ""
 

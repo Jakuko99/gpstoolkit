@@ -21,12 +21,12 @@ Page {
         var distance = Math.round(positionSource.position.coordinate.distanceTo(compassPage.coord1)) + "m"
         var azimuth = positionSource.position.coordinate.azimuthTo(compassPage.coord1)
 
-        locText.text = lat + " - " + lon
+        locTextLat.text = lat + "º"
+        locTextLon.text = lon + "º"
         distanceText.text = distance
         degreeText.text = Math.round(azimuth) + "°"
         compassui.setBearing(Math.round(azimuth))
         compassui.setDirection(Math.round(azimuth))
-        curlocText.text = "Lat: " + positionSource.position.coordinate.latitude + " Lon: " + positionSource.position.coordinate.longitude
     }
 
     header: ToolBar {
@@ -75,42 +75,89 @@ Page {
             top: parent.top
         }
 
-        Label {
-            id: locText
-            text: "Loc Test"
-            font.pointSize: marginVal * 2.5
+        Column {
+            Label {
+                id: locTextLat
+                text: "Loc Test"
+                font.pointSize: marginVal * 3
+            }
+
+            Label {
+                text: i18n.tr("Destination latitude")
+                font.bold: true
+            }
         }
 
-        Label {
-            text: "DTS test"
-            id: dstText
-            font.pointSize: marginVal * 2.5
+        Column {
+            Label {
+                text: "Loc Test"
+                id: locTextLon
+                font.pointSize: marginVal * 3
+            }
+
+            Label {
+                text: i18n.tr("Destination longitude")
+                font.bold: true
+            }
         }
 
-        Label {
-            id: degreeText
-            text: "degree Test"
-            font.pointSize: marginVal * 3
+        Column {
+            Label {
+                id: degreeText
+                text: "degree Test"
+                font.pointSize: marginVal * 3
+            }
+
+            Label {
+                text: i18n.tr("Destination azimuth")
+                font.bold: true
+            }
         }
 
-        Label {
-            id: distanceText
-            text: "dist Test"
-            font.pointSize: marginVal * 3
+        Column {
+            Label {
+                id: distanceText
+                text: "dist Test"
+                font.pointSize: marginVal * 3
+            }
+
+            Label {
+                text: i18n.tr("Destination distance")
+                font.bold: true
+            }
+        }
+
+        Column {
+            Label {
+                id: curlocTextLat
+                text: roundNumber(positionSource.position.coordinate.latitude, 5) + "º"
+                font.pointSize: marginVal * 3
+            }
+
+            Label {
+                text: i18n.tr("Current latitude")
+                font.bold: true
+            }
+        }
+
+
+        Column {
+            Label {
+                id: curlocTextLon
+                text: roundNumber(positionSource.position.coordinate.longitude, 5) + "º"
+                font.pointSize: marginVal * 3
+            }
+
+            Label {
+                text: i18n.tr("Current longitude")
+                font.bold: true
+            }
         }
 
         CompassUi {
             Layout.columnSpan: 2
             Layout.rowSpan: 2
             id: compassui
-        }
-
-        Label {
-            Layout.columnSpan: 2
-            Layout.fillWidth: true
-            id: curlocText
-            text: "curloc Test"
-            font.pixelSize: units.gu(3)
         }
     }
 
@@ -127,7 +174,7 @@ Page {
             if(positionSource.position.coordinate.latitude == 0 && positionSource.position.coordinate.longitude == 0)
                 return
 
-            var distance = Math.round(positionSource.position.coordinate.distanceTo(compassPage.coord1)) + "m"
+            var distance = Math.round(positionSource.position.coordinate.distanceTo(compassPage.coord1)) + " m"
             var azimuth = Math.round(positionSource.position.coordinate.azimuthTo(compassPage.coord1))
 
             compassui.setBearing(azimuth)
@@ -135,7 +182,6 @@ Page {
             degreeText.text = Math.round(azimuth) + "°"
 
             compassui.setDirection(Math.floor(azimuth))
-            curlocText.text = "Lat: " + positionSource.position.coordinate.latitude + " Lon: " + positionSource.position.coordinate.longitude
         }
     }
 

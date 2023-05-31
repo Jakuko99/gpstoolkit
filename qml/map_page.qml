@@ -54,7 +54,7 @@ Page {
         anchors.fill: parent
 
         Label {
-            text: "Coming soon"
+            text: "Map feature will be added later"
         }
     }
 }
