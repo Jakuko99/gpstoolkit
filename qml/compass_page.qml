@@ -1,15 +1,20 @@
-import QtLocation 5.9
-import QtQuick 2.9
+import QtQuick 2.6
+import Ubuntu.Components 1.3
+import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
 import QtPositioning 5.2
-import QtQuick.Layouts 1.3
 import QtSensors 5.9
-import Ubuntu.Components 1.3
+import Qt.labs.settings 1.0
+import io.thp.pyotherside 1.4
 
 Page {
     id: compassPage
-    property real marginVal: units.gu(1)
     property var coord1
+    property real marginVal: units.gu(1)
+
+    function roundNumber(num, dec) {
+        return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+    }
 
     function updateScreen(lat, lon) {
         compassPage.coord1 = QtPositioning.coordinate(parseFloat(lat), parseFloat(lon))
@@ -21,7 +26,7 @@ Page {
         degreeText.text = Math.round(azimuth) + "°"
         compassui.setBearing(Math.round(azimuth))
         compassui.setDirection(Math.round(azimuth))
-        curlocText.text = positionSource.position.coordinate.latitude + " - " + positionSource.position.coordinate.longitude
+        curlocText.text = "Lat: " + positionSource.position.coordinate.latitude + " Lon: " + positionSource.position.coordinate.longitude
     }
 
     header: ToolBar {
@@ -57,58 +62,56 @@ Page {
             }
         }
     }
-
-    Column {
+    
+    Grid {
         anchors.fill: parent
-
-        Label{
-            horizontalAlignment: Qt.AlignHCenter
-            id: locText
-            text: "Loc Test"
-            font.pixelSize: units.gu(3)
+        columns: 2
+        columnSpacing: marginVal * 2.5
+        spacing: marginVal
+        anchors {
+            margins: units.gu(2)
+            left: parent.left
+            right: parent.right
+            top: parent.top
         }
 
         Label {
-            horizontalAlignment: Qt.AlignHCenter
-            id: dtsText
-            text: "DTS Test"
+            id: locText
+            text: "Loc Test"
+            font.pointSize: marginVal * 2.5
+        }
+
+        Label {
+            text: "DTS test"
+            id: dstText
+            font.pointSize: marginVal * 2.5
+        }
+
+        Label {
+            id: degreeText
+            text: "degree Test"
+            font.pointSize: marginVal * 3
+        }
+
+        Label {
+            id: distanceText
+            text: "dist Test"
+            font.pointSize: marginVal * 3
+        }
+
+        CompassUi {
+            Layout.columnSpan: 2
+            Layout.rowSpan: 2
+            id: compassui
+        }
+
+        Label {
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+            id: curlocText
+            text: "curloc Test"
             font.pixelSize: units.gu(3)
         }
-
-        Row {
-            Label {
-                horizontalAlignment: Qt.AlignLeft
-                id: degreeText
-                text: "degree Test"
-                font.pixelSize: units.gu(5)
-            }
-
-            Label {
-                horizontalAlignment: Qt.AlignRight
-                id: distanceText
-                text: "dist Test"
-                font.pixelSize: units.gu(5)
-            }
-        }
-    }
-
-    CompassUi {
-        id: compassui
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-        width: units.gu(40)
-        height: units.gu(40)
-    }
-
-    Label {
-        width: parent.width
-        horizontalAlignment: Text.AlignHCenter
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        id: curlocText
-        text: "curloc Test"
-        font.pixelSize: units.gu(3)
     }
 
     Timer {
@@ -131,9 +134,8 @@ Page {
             distanceText.text = distance
             degreeText.text = Math.round(azimuth) + "°"
 
-            compassui.setDirection(Math.floor(direction))
-            curlocText.text = from_decimal(positionSource.position.coordinate.latitude, "lat") + " - " +
-                    from_decimal(positionSource.position.coordinate.longitude, "lon")
+            compassui.setDirection(Math.floor(azimuth))
+            curlocText.text = "Lat: " + positionSource.position.coordinate.latitude + " Lon: " + positionSource.position.coordinate.longitude
         }
     }
 

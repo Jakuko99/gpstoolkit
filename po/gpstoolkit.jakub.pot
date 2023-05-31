@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 12:06+0000\n"
+"POT-Creation-Date: 2023-05-31 10:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "QTH Locator"
 msgstr ""
 
-#: ../qml/Main.qml:99 ../qml/compass_page.qml:36
+#: ../qml/Main.qml:99 ../qml/compass_page.qml:41 ../qml/compass_page_old.qml:36
 msgid "Compass navigation"
 msgstr ""
 
@@ -33,11 +33,13 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:136 ../qml/compass_page.qml:191
+#: ../qml/Main.qml:136 ../qml/compass_page.qml:193
+#: ../qml/compass_page_old.qml:191
 msgid "Latitude"
 msgstr ""
 
-#: ../qml/Main.qml:151 ../qml/compass_page.qml:206
+#: ../qml/Main.qml:151 ../qml/compass_page.qml:208
+#: ../qml/compass_page_old.qml:206
 msgid "Longitude"
 msgstr ""
 
@@ -73,23 +75,23 @@ msgstr ""
 msgid "Report issues"
 msgstr ""
 
-#: ../qml/compass_page.qml:53
+#: ../qml/compass_page.qml:58 ../qml/compass_page_old.qml:53
 msgid "Set position"
 msgstr ""
 
-#: ../qml/compass_page.qml:169
+#: ../qml/compass_page.qml:171 ../qml/compass_page_old.qml:169
 msgid "Set destination"
 msgstr ""
 
-#: ../qml/compass_page.qml:176
+#: ../qml/compass_page.qml:178 ../qml/compass_page_old.qml:176
 msgid "Set"
 msgstr ""
 
-#: ../qml/compass_page.qml:186
+#: ../qml/compass_page.qml:188 ../qml/compass_page_old.qml:186
 msgid "Lat: "
 msgstr ""
 
-#: ../qml/compass_page.qml:200
+#: ../qml/compass_page.qml:202 ../qml/compass_page_old.qml:200
 msgid "Lng:"
 msgstr ""
 
