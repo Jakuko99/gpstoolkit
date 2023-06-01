@@ -45,23 +45,6 @@ Page {
             }
             ToolButton {
                 text: qsTr(" ")
-                //                onClicked: optionsMenu.open()
-
-                //                Menu {
-                //                    id: optionsMenu
-                //                    transformOrigin: Menu.TopRight
-                //                    x: parent.width - width
-                //                    y: parent.height
-
-                //                    MenuItem {
-                //                        text: "Clear list"
-                //                        onTriggered: contentTrainList.model.clear()
-                //                    }
-                //                    MenuItem{
-                //                        text: 'Settings'
-                //                        onTriggered: settingsDialog.open()
-                //                    }
-                //                }
             }
         }
     }

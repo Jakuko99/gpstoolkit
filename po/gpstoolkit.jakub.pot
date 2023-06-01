@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-31 13:08+0000\n"
+"POT-Creation-Date: 2023-06-01 09:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,43 +17,47 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:95 ../qml/Main.qml:200 ../qml/maiden_locator.qml:109
+#: ../qml/Main.qml:95 ../qml/Main.qml:205 ../qml/maiden_locator.qml:92
 msgid "QTH Locator"
 msgstr ""
 
-#: ../qml/Main.qml:99 ../qml/compass_page.qml:41
+#: ../qml/Main.qml:99 ../qml/compass_page.qml:55
 msgid "Compass navigation"
 msgstr ""
 
-#: ../qml/Main.qml:103 ../qml/map_page.qml:25
+#: ../qml/Main.qml:103 ../qml/conversion_page.qml:25
+msgid "Unit conversions"
+msgstr ""
+
+#: ../qml/Main.qml:108 ../qml/map_page.qml:25
 msgid "Map"
 msgstr ""
 
-#: ../qml/Main.qml:107
+#: ../qml/Main.qml:112
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:136 ../qml/compass_page.qml:239
+#: ../qml/Main.qml:141
 msgid "Latitude"
 msgstr ""
 
-#: ../qml/Main.qml:151 ../qml/compass_page.qml:254
+#: ../qml/Main.qml:156
 msgid "Longitude"
 msgstr ""
 
-#: ../qml/Main.qml:164
+#: ../qml/Main.qml:169
 msgid "Altitude"
 msgstr ""
 
-#: ../qml/Main.qml:176
+#: ../qml/Main.qml:181
 msgid "Accuracy"
 msgstr ""
 
-#: ../qml/Main.qml:188
+#: ../qml/Main.qml:193
 msgid "Speed"
 msgstr ""
 
-#: ../qml/Main.qml:212
+#: ../qml/Main.qml:217
 msgid "Last updated: "
 msgstr ""
 
@@ -73,90 +77,85 @@ msgstr ""
 msgid "Report issues"
 msgstr ""
 
-#: ../qml/compass_page.qml:58
+#: ../qml/compass_page.qml:72
 msgid "Set position"
 msgstr ""
 
-#: ../qml/compass_page.qml:86
+#: ../qml/compass_page.qml:100
 msgid "Destination latitude"
 msgstr ""
 
-#: ../qml/compass_page.qml:99
+#: ../qml/compass_page.qml:113
 msgid "Destination longitude"
 msgstr ""
 
-#: ../qml/compass_page.qml:112
+#: ../qml/compass_page.qml:126
 msgid "Destination azimuth"
 msgstr ""
 
-#: ../qml/compass_page.qml:125
+#: ../qml/compass_page.qml:139
 msgid "Destination distance"
 msgstr ""
 
-#: ../qml/compass_page.qml:138
+#: ../qml/compass_page.qml:152
 msgid "Current latitude"
 msgstr ""
 
-#: ../qml/compass_page.qml:152
+#: ../qml/compass_page.qml:166
 msgid "Current longitude"
 msgstr ""
 
-#: ../qml/compass_page.qml:217
+#: ../qml/compass_page.qml:231 ../qml/compass_page.qml:335
+#: ../qml/compass_page.qml:507
 msgid "Set destination"
 msgstr ""
 
-#: ../qml/compass_page.qml:224
-msgid "Set"
+#: ../qml/compass_page.qml:237
+msgid "Close"
 msgstr ""
 
-#: ../qml/compass_page.qml:234
-msgid "Lat: "
+#: ../qml/compass_page.qml:255 ../qml/maiden_locator.qml:68
+msgid "Decimal"
 msgstr ""
 
-#: ../qml/compass_page.qml:248
-msgid "Lng:"
+#: ../qml/compass_page.qml:267 ../qml/maiden_locator.qml:80
+msgid "Sexagesimal"
+msgstr ""
+
+#: ../qml/compass_page.qml:303 ../qml/compass_page.qml:372
+#: ../qml/maiden_locator.qml:128 ../qml/maiden_locator.qml:208
+msgid "Lat:"
+msgstr ""
+
+#: ../qml/compass_page.qml:320 ../qml/compass_page.qml:440
+#: ../qml/maiden_locator.qml:145 ../qml/maiden_locator.qml:276
+msgid "Long:"
 msgstr ""
 
 #: ../qml/maiden_locator.qml:40
 msgid "Maidenhead (QTH) Locator"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:85
-msgid "Decimal"
-msgstr ""
-
-#: ../qml/maiden_locator.qml:97
-msgid "Sexagesimal"
-msgstr ""
-
-#: ../qml/maiden_locator.qml:145 ../qml/maiden_locator.qml:225
-msgid "Lat:"
-msgstr ""
-
-#: ../qml/maiden_locator.qml:162 ../qml/maiden_locator.qml:293
-msgid "Long:"
-msgstr ""
-
-#: ../qml/maiden_locator.qml:177 ../qml/maiden_locator.qml:360
+#: ../qml/maiden_locator.qml:160 ../qml/maiden_locator.qml:343
 msgid "Convert to QTH Locator"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:204 ../qml/maiden_locator.qml:414
+#: ../qml/maiden_locator.qml:187 ../qml/maiden_locator.qml:397
 msgid "QTH Locator:"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:439
+#: ../qml/maiden_locator.qml:422
 msgid "QTH:"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:453
+#: ../qml/maiden_locator.qml:436
 msgid "Convert to coordinates"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:471
+#: ../qml/maiden_locator.qml:454
 msgid "Latitude:"
 msgstr ""
 
-#: ../qml/maiden_locator.qml:482
+#: ../qml/maiden_locator.qml:465
 msgid "Longitude:"
 msgstr ""

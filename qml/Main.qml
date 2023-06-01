@@ -100,6 +100,11 @@ ApplicationWindow {
                             onTriggered: stack.push(Qt.resolvedUrl("compass_page.qml"))
                         }
                         MenuItem {
+                            text: i18n.tr("Unit conversions")
+                            onTriggered: stack.push(Qt.resolvedUrl("conversion_page.qml"))
+                        }
+
+                        MenuItem {
                             text: i18n.tr("Map")
                             onTriggered: stack.push(Qt.resolvedUrl("map_page.qml"))
                         }
