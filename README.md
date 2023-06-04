@@ -1,4 +1,5 @@
 # GPS Toolkit
+Download from OpenStore [here](https://open-store.io/app/gpstoolkit.jakub)
 
 Toolkit containing tools for calculating maiden locator, simple compass navigation to coordinates and more
 
