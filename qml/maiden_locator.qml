@@ -26,6 +26,8 @@ Page {
         property string default_coord_3c
         property string default_coord_3d
         property string default_qth
+        property string default_qth1
+        property string default_qth2
     }
 
     header: ToolBar {
@@ -89,11 +91,23 @@ Page {
                 height: buttonLabel.implicitHeight + units.gu(2)
                 Label {
                     id: buttonLabel3
-                    text: i18n.tr("QTH Locator")
+                    text: i18n.tr("QTH")
                     anchors.centerIn: parent
                     color: coordinateLoader.sourceComponent === colLocatorComponent ? theme.palette.normal.activity : theme.palette.normal.backgroundTertiaryText
                 }
                 onClicked: coordinateLoader.sourceComponent = colLocatorComponent
+            }
+
+            AbstractButton {
+                width: buttonLabel.implicitWidth + units.gu(3)
+                height: buttonLabel.implicitHeight + units.gu(2)
+                Label {
+                    id: buttonLabel4
+                    text: i18n.tr("QTH dist")
+                    anchors.centerIn: parent
+                    color: coordinateLoader.sourceComponent === colDistanceComponent ? theme.palette.normal.activity : theme.palette.normal.backgroundTertiaryText
+                }
+                onClicked: coordinateLoader.sourceComponent = colDistanceComponent
             }
         }
 
@@ -471,6 +485,104 @@ Page {
                     font.pointSize: marginVal * 2.5
                 }
             }
+        }
+
+        Component {
+            id: colDistanceComponent
+            Column {
+                id: colDist
+                spacing: marginVal * 2
+
+                Row {
+                    spacing: units.gu(1)
+                    Label {
+                        anchors.verticalCenter: parent.verticalCenter
+                        text: i18n.tr("QTH 1:")
+                        width: units.gu(5)
+                    }
+
+                    TextField {
+                        id: qthLoc1
+                        maximumLength: 8
+                        width: units.gu(22)
+                        placeholderText: settings.default_qth1
+                        font.capitalization: Font.AllUppercase
+                    }
+                }
+
+                Row {
+                    spacing: units.gu(1)
+                    Label {
+                        anchors.verticalCenter: parent.verticalCenter
+                        text: i18n.tr("QTH 2:")
+                        width: units.gu(5)
+                    }
+
+                    TextField {
+                        id: qthLoc2
+                        maximumLength: 8
+                        width: units.gu(22)
+                        placeholderText: settings.default_qth2
+                        font.capitalization: Font.AllUppercase
+                    }
+                }
+
+                Button {
+                    id: showLocDist
+                    text: i18n.tr("Calculate distance")
+                    width: units.gu(26)
+                    anchors.topMargin: units.gu(5)
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    // color: theme.palette.normal.positive
+                    onClicked: {
+                        qthLoc1.text === "" ? qthLoc1.text = qthLoc1.placeholderText : undefined;
+                        qthLoc2.text === "" ? qthLoc2.text = qthLoc2.placeholderText : undefined;
+
+                        settings.default_qth1 = qthLoc1.text;
+                        settings.default_qth2 = qthLoc2.text;
+                        python.call("maiden.distance_between_qth", [qthLoc1.text, qthLoc2.text], function(returnVal){
+                            if (typeof(returnVal) === "string"){
+                                textLabel.text = returnVal;
+                                errorDialog.open();
+                            } else {
+                                resultLabel.text = roundNumber(returnVal, 1) + " km";
+                            }
+                        });
+                    }
+                }
+
+                Label {
+                    text: i18n.tr("Calculated distance:")
+                    font.bold: true
+                }
+
+                Label {
+                    id: resultLabel
+                    font.pointSize: marginVal * 2.5
+                    wrapMode: Label.WordWrap
+                }
+            }
+        }
+    }
+
+    Dialog {
+        id: errorDialog
+        x: Math.round((root.width - width) / 2)
+        y: (root.height - height) / 2 - header.height
+        width: units.gu(38)
+        height: units.gu(20)
+        modal: true
+        focus: true
+        title: i18n.tr("Error message")
+        standardButtons: Dialog.Ok
+        onAccepted: {
+            errorDialog.close()
+        }
+
+        contentItem: Label {
+            id: textLabel
+            text: "Error message"
+            wrapMode: Label.WordWrap
         }
     }
 

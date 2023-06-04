@@ -99,10 +99,10 @@ ApplicationWindow {
                             text: i18n.tr("Compass navigation")
                             onTriggered: stack.push(Qt.resolvedUrl("compass_page.qml"))
                         }
-                        MenuItem {
+                        /*MenuItem { //might be added later
                             text: i18n.tr("Unit conversions")
                             onTriggered: stack.push(Qt.resolvedUrl("conversion_page.qml"))
-                        }
+                        }*/
 
                         MenuItem {
                             text: i18n.tr("Map")

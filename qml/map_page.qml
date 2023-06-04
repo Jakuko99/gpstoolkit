@@ -52,6 +52,7 @@ Page {
     }
     Column {
         anchors.fill: parent
+        anchors.margins: marginVal * 2
 
         Label {
             text: i18n.tr("Map feature will be added later")

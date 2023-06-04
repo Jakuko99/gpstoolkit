@@ -18,7 +18,7 @@ Page {
             }
             Label {
                 text: "About"
-                elide: Label.ElideRight                
+                elide: Label.ElideRight
                 horizontalAlignment: Qt.AlignHCenter
                 verticalAlignment: Qt.AlignVCenter
                 Layout.fillWidth: true
@@ -84,7 +84,7 @@ Page {
             anchors.right: parent.right
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: units.gu(1.75)
-        }     
+        }
 
         Button {
             anchors.left: parent.left
@@ -102,6 +102,25 @@ Page {
             anchors.leftMargin: marginVal
             text: i18n.tr("Report issues")
             onClicked: Qt.openUrlExternally("https://github.com/Jakuko99/gpstoolkit/issues")
+        }
+
+        Label {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.rightMargin: marginVal
+            anchors.leftMargin: marginVal
+            wrapMode: Label.WordWrap
+            font.bold: true
+            text: i18n.tr("Acknowledgements:")
+        }
+
+        Label {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.rightMargin: marginVal
+            anchors.leftMargin: marginVal
+            wrapMode: Label.WordWrap
+            text: i18n.tr("Coordinate picker design was copied from uNav by Costales, compass component was copied from Geocaching for UT by evilbunny2008, both apps are available in OpenStore.")
         }
     }
 }

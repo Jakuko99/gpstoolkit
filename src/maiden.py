@@ -42,7 +42,7 @@ def to_location(maiden: str, center: bool = True):
 
     N = len(maiden)
     if not ((8 >= N >= 2) and (N % 2 == 0)):
-        raise ValueError("Maidenhead locator requires 2-8 characters, even number of characters")
+        raise ValueError("Maidenhead locator requires 2-8 characters and should have even number of characters.")
 
     Oa = ord("A")
     lon = -180.0

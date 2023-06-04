@@ -140,7 +140,31 @@ Page {
                 text: i18n.tr("Destination distance")
                 font.bold: true
             }
-        }       
+        }
+
+        Column {
+            Label {
+                text: roundNumber(geoposition.position.speed * 3.6, 1) + " km/h"
+                font.pointSize: marginVal * 3
+            }
+
+            Label{
+                text: i18n.tr("Speed")
+                font.bold: true
+            }
+        }
+
+        Column {
+            Label {
+                text: "± " + roundNumber(geoposition.position.horizontalAccuracy, 1) + " m"
+                font.pointSize: marginVal * 3
+            }
+
+            Label{
+                text: i18n.tr("Accuracy")
+                font.bold: true
+            }
+        }
 
         CompassUi {
             Layout.alignment: Qt.AlignCenter
