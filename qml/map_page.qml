@@ -39,11 +39,11 @@ Page {
                 //                    y: parent.height
 
                 //                    MenuItem {
-                //                        text: "Clear list"
+                //                        text: i18n.tr("Saved points")
                 //                        onTriggered: contentTrainList.model.clear()
                 //                    }
                 //                    MenuItem{
-                //                        text: 'Settings'
+                //                        text: i18n.tr('Settings')
                 //                        onTriggered: settingsDialog.open()
                 //                    }
                 //                }
@@ -54,7 +54,7 @@ Page {
         anchors.fill: parent
 
         Label {
-            text: "Map feature will be added later"
+            text: i18n.tr("Map feature will be added later")
         }
     }
 }

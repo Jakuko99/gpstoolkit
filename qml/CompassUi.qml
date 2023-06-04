@@ -3,8 +3,8 @@ import QtQuick 2.5
 Item {
     id: compassui
 
-    anchors.horizontalCenter: parent.horizontalCenter
-    anchors.verticalCenter: parent.verticalCenter
+    //anchors.horizontalCenter: parent.horizontalCenter
+    //anchors.verticalCenter: parent.verticalCenter
 
     function setBearing(headingIn)
     {
@@ -17,12 +17,12 @@ Item {
     }
 
     Item {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
+        //anchors.horizontalCenter: parent.horizontalCenter
+        //anchors.verticalCenter: parent.verticalCenter
 
         Image {
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
+            //anchors.horizontalCenter: parent.horizontalCenter
+            //anchors.verticalCenter: parent.verticalCenter
             height: units.gu(40)
             width: units.gu(40)
             fillMode: Image.PreserveAspectFit
@@ -31,8 +31,8 @@ Item {
 
         Image {
             id: bgrose;
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
+            //anchors.horizontalCenter: parent.horizontalCenter
+            //anchors.verticalCenter: parent.verticalCenter
             height: units.gu(40)
             width: units.gu(40)
             fillMode: Image.PreserveAspectFit
@@ -55,8 +55,8 @@ Item {
 
         Image {
             id: background;
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
+            //anchors.horizontalCenter: parent.horizontalCenter
+            //anchors.verticalCenter: parent.verticalCenter
             height: units.gu(40)
             width: units.gu(40)
             fillMode: Image.PreserveAspectFit

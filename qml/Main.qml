@@ -117,11 +117,11 @@ ApplicationWindow {
             }
         }
 
-        Grid{
+        GridLayout{
             id: contentGrid
             columns: 2
             columnSpacing: marginVal * 2.5
-            spacing: marginVal
+            //spacing: marginVal
             anchors {
                 margins: units.gu(2)
                 left: parent.left

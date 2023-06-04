@@ -32,7 +32,7 @@ Page {
 
     function updateScreen(lat, lon) {
         compassPage.coord1 = QtPositioning.coordinate(parseFloat(lat), parseFloat(lon))
-        var distance = Math.round(positionSource.position.coordinate.distanceTo(compassPage.coord1)) + "m"
+        var distance = Math.round(positionSource.position.coordinate.distanceTo(compassPage.coord1)) + " m"
         var azimuth = positionSource.position.coordinate.azimuthTo(compassPage.coord1)
 
         locTextLat.text = lat + "º"
@@ -77,11 +77,12 @@ Page {
         }
     }
     
-    Grid {
+    GridLayout {
         anchors.fill: parent
         columns: 2
         columnSpacing: marginVal * 2.5
-        spacing: marginVal
+        rowSpacing: marginVal
+        //spacing: marginVal
         anchors {
             margins: units.gu(2)
             left: parent.left
@@ -92,7 +93,7 @@ Page {
         Column {
             Label {
                 id: locTextLat
-                text: "Loc Test"
+                text: i18n.tr("Not set")
                 font.pointSize: marginVal * 3
             }
 
@@ -104,7 +105,7 @@ Page {
 
         Column {
             Label {
-                text: "Loc Test"
+                text: i18n.tr("Not set")
                 id: locTextLon
                 font.pointSize: marginVal * 3
             }
@@ -118,7 +119,7 @@ Page {
         Column {
             Label {
                 id: degreeText
-                text: "degree Test"
+                text: "-"
                 font.pointSize: marginVal * 3
             }
 
@@ -131,7 +132,7 @@ Page {
         Column {
             Label {
                 id: distanceText
-                text: "dist Test"
+                text: "- m"
                 font.pointSize: marginVal * 3
             }
 
@@ -139,6 +140,15 @@ Page {
                 text: i18n.tr("Destination distance")
                 font.bold: true
             }
+        }       
+
+        CompassUi {
+            Layout.alignment: Qt.AlignCenter
+            Layout.columnSpan: 2
+            Layout.rowSpan: 2
+            width: units.gu(40)
+            height: units.gu(40)
+            id: compassui
         }
 
         Column {
@@ -154,7 +164,6 @@ Page {
             }
         }
 
-
         Column {
             Label {
                 id: curlocTextLon
@@ -166,12 +175,6 @@ Page {
                 text: i18n.tr("Current longitude")
                 font.bold: true
             }
-        }
-
-        CompassUi {
-            Layout.columnSpan: 2
-            Layout.rowSpan: 2
-            id: compassui
         }
     }
 

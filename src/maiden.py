@@ -76,8 +76,11 @@ def to_location(maiden: str, center: bool = True):
     return lat, lon
 
 def distance_between_qth(loc1, loc2):
-    lat1, lon1 = to_location(loc1)
-    lat2, lon2 = to_location(loc2)
+    try:
+        lat1, lon1 = to_location(loc1)
+        lat2, lon2 = to_location(loc2)
+    except Exception as e:
+        return str(e)
 
     dist = haversine.calculate_distance(lat1, lon1, lat2, lon2)
-    return dist
+    return float(dist)
