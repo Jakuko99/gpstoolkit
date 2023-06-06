@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gpstoolkit.jakub package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gpstoolkit.jakub\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-05 18:45+0000\n"
+"PO-Revision-Date: 2023-06-06 11:59+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.1\n"
+
+#: ../qml/Main.qml:95 ../qml/Main.qml:205
+msgid "QTH Locator"
+msgstr "QTH-locatiezoeker"
+
+#: ../qml/Main.qml:99 ../qml/compass_page.qml:55
+msgid "Compass navigation"
+msgstr "Kompasnavigatie"
+
+#: ../qml/Main.qml:108 ../qml/map_page.qml:25
+msgid "Map"
+msgstr "Kaart"
+
+#: ../qml/Main.qml:112
+msgid "About"
+msgstr "Over"
+
+#: ../qml/Main.qml:141
+msgid "Latitude"
+msgstr "Breedtegraad"
+
+#: ../qml/Main.qml:156
+msgid "Longitude"
+msgstr "Lengtegraad"
+
+#: ../qml/Main.qml:169
+msgid "Altitude"
+msgstr "Hoogte"
+
+#: ../qml/Main.qml:181 ../qml/compass_page.qml:164
+msgid "Accuracy"
+msgstr "Nauwkeurigheid"
+
+#: ../qml/Main.qml:193 ../qml/compass_page.qml:152
+msgid "Speed"
+msgstr "Snelheid"
+
+#: ../qml/Main.qml:217
+msgid "Last updated: "
+msgstr "Laatst bijgewerkt: "
+
+#: ../qml/aboutPage.qml:69 gpstoolkit.desktop.in.h:1
+msgid "GPS Toolkit"
+msgstr "Gps-gereedschap"
+
+#: ../qml/aboutPage.qml:80
+msgid "Version %1"
+msgstr "Versie %1"
+
+#: ../qml/aboutPage.qml:94
+msgid "Get the source"
+msgstr "Broncode tonen"
+
+#: ../qml/aboutPage.qml:103
+msgid "Report issues"
+msgstr "Problemen melden"
+
+#: ../qml/aboutPage.qml:114
+msgid "Acknowledgements:"
+msgstr "Met dank aan:"
+
+#: ../qml/aboutPage.qml:123
+msgid ""
+"Coordinate picker design was copied from uNav by Costales, compass component "
+"was copied from Geocaching for UT by evilbunny2008, both apps are available "
+"in OpenStore."
+msgstr ""
+"De coördinatenkiezer is gekopieerd uit het project ‘uNav’ van Costales; het "
+"kompasonderdeel uit ‘Geocaching for UT’ van evilbunny2008. Beide apps zijn "
+"beschikbaar in de OpenStore."
+
+#: ../qml/compass_page.qml:72
+msgid "Set position"
+msgstr "Locatie instellen"
+
+#: ../qml/compass_page.qml:96 ../qml/compass_page.qml:108
+msgid "Not set"
+msgstr "Niet ingesteld"
+
+#: ../qml/compass_page.qml:101
+msgid "Destination latitude"
+msgstr "Breedtegraad van bestemming"
+
+#: ../qml/compass_page.qml:114
+msgid "Destination longitude"
+msgstr "Lengtegraad van bestemming"
+
+#: ../qml/compass_page.qml:127
+msgid "Destination azimuth"
+msgstr "Azimut van bestemming"
+
+#: ../qml/compass_page.qml:140
+msgid "Destination distance"
+msgstr "Afstand tot bestemming"
+
+#: ../qml/compass_page.qml:186
+msgid "Current latitude"
+msgstr "Huidige breedtegraad"
+
+#: ../qml/compass_page.qml:199
+msgid "Current longitude"
+msgstr "Huidige lengtegraad"
+
+#: ../qml/compass_page.qml:258 ../qml/compass_page.qml:362
+#: ../qml/compass_page.qml:534
+msgid "Set destination"
+msgstr "Bestemming instellen"
+
+#: ../qml/compass_page.qml:264
+msgid "Close"
+msgstr "Sluiten"
+
+#: ../qml/compass_page.qml:282 ../qml/maiden_locator.qml:70
+msgid "Decimal"
+msgstr "Decimaal"
+
+#: ../qml/compass_page.qml:294 ../qml/maiden_locator.qml:82
+msgid "Sexagesimal"
+msgstr "Sexagesimaal"
+
+#: ../qml/compass_page.qml:330 ../qml/compass_page.qml:399
+#: ../qml/maiden_locator.qml:142 ../qml/maiden_locator.qml:222
+msgid "Lat:"
+msgstr "Brdtgrd:"
+
+#: ../qml/compass_page.qml:347 ../qml/compass_page.qml:467
+#: ../qml/maiden_locator.qml:159 ../qml/maiden_locator.qml:290
+msgid "Long:"
+msgstr "Lngtgrd:"
+
+#: ../qml/conversion_page.qml:29
+msgid "Unit conversions"
+msgstr "Eenheden omzetten"
+
+#: ../qml/conversion_page.qml:55
+msgid "Coordinate conversions"
+msgstr "Coördinaten omzetten"
+
+#: ../qml/conversion_page.qml:64 ../qml/maiden_locator.qml:468
+msgid "Latitude:"
+msgstr "Breedtegraad:"
+
+#: ../qml/conversion_page.qml:75 ../qml/maiden_locator.qml:479
+msgid "Longitude:"
+msgstr "Lengtegraad:"
+
+#: ../qml/conversion_page.qml:88
+msgid "Convert"
+msgstr "Omzetten"
+
+#: ../qml/conversion_page.qml:102
+msgid "Maidenhead (QTH) Locator Distance"
+msgstr "Maidenhead (QTH)-locatieafstand"
+
+#: ../qml/conversion_page.qml:109
+msgid "QTH from: "
+msgstr "QTH vanaf: "
+
+#: ../qml/conversion_page.qml:124
+msgid "QTH to:      "
+msgstr "QTH naar:      "
+
+#: ../qml/conversion_page.qml:138
+msgid "Calculate"
+msgstr "Berekenen"
+
+#: ../qml/maiden_locator.qml:42
+msgid "Maidenhead (QTH) Locator"
+msgstr "Maidenhead (QTH)-locatiezoeker"
+
+#: ../qml/maiden_locator.qml:94
+msgid "QTH"
+msgstr "QTH"
+
+#: ../qml/maiden_locator.qml:106
+msgid "QTH dist"
+msgstr "QTH-afstand"
+
+#: ../qml/maiden_locator.qml:174 ../qml/maiden_locator.qml:357
+msgid "Convert to QTH Locator"
+msgstr "Omzetten naar QTH-locatiezoeker"
+
+#: ../qml/maiden_locator.qml:201 ../qml/maiden_locator.qml:411
+msgid "QTH Locator:"
+msgstr "QTH-locatiezoeker:"
+
+#: ../qml/maiden_locator.qml:436
+msgid "QTH:"
+msgstr "QTH:"
+
+#: ../qml/maiden_locator.qml:450
+msgid "Convert to coordinates"
+msgstr "Omzetten naar coördinaten"
+
+#: ../qml/maiden_locator.qml:500
+msgid "QTH 1:"
+msgstr "QTH 1:"
+
+#: ../qml/maiden_locator.qml:517
+msgid "QTH 2:"
+msgstr "QTH 2:"
+
+#: ../qml/maiden_locator.qml:532
+msgid "Calculate distance"
+msgstr "Afstand berekenen"
+
+#: ../qml/maiden_locator.qml:555
+msgid "Calculated distance:"
+msgstr "Berekende afstand:"
+
+#: ../qml/maiden_locator.qml:576
+msgid "Error message"
+msgstr "Foutmelding"
+
+#: ../qml/map_page.qml:58
+msgid "Map feature will be added later"
+msgstr "De kaartfunctie is nog niet beschikbaar"
