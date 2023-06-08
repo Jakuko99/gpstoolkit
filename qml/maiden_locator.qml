@@ -442,6 +442,7 @@ Page {
                         maximumLength: 15
                         width: units.gu(22)
                         placeholderText: settings.default_qth
+                        font.capitalization: Font.AllUppercase
                     }
                 }
 

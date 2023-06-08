@@ -35,12 +35,14 @@ Page {
         var distance = Math.round(positionSource.position.coordinate.distanceTo(compassPage.coord1)) + " m"
         var azimuth = positionSource.position.coordinate.azimuthTo(compassPage.coord1)
 
-        locTextLat.text = lat + "º"
-        locTextLon.text = lon + "º"
+        locTextLat.text = roundNumber(lat, 5) + "º"
+        locTextLon.text = roundNumber(lon, 5) + "º"
         distanceText.text = distance
         degreeText.text = Math.round(azimuth) + "°"
+        if (compass.reading != null){
+            compassui.setDirection(compass.reading.azimuth)
+        }
         compassui.setBearing(Math.round(azimuth))
-        compassui.setDirection(Math.round(azimuth))
     }
 
     header: ToolBar {
@@ -144,7 +146,7 @@ Page {
 
         Column {
             Label {
-                text: roundNumber(geoposition.position.speed * 3.6, 1) + " km/h"
+                text: (roundNumber(geoposition.position.speed * 3.6, 1) || i18n.tr("0")) + " km/h"
                 font.pointSize: marginVal * 3
             }
 
@@ -156,7 +158,7 @@ Page {
 
         Column {
             Label {
-                text: "± " + roundNumber(geoposition.position.horizontalAccuracy, 1) + " m"
+                text: "± " + (roundNumber(geoposition.position.horizontalAccuracy, 1) || i18n.tr("No fix")) + " m"
                 font.pointSize: marginVal * 3
             }
 
@@ -178,7 +180,7 @@ Page {
         Column {
             Label {
                 id: curlocTextLat
-                text: roundNumber(positionSource.position.coordinate.latitude, 5) + "º"
+                text: (roundNumber(positionSource.position.coordinate.latitude, 5) || i18n.tr("No fix")) + "º"
                 font.pointSize: marginVal * 3
             }
 
@@ -191,7 +193,7 @@ Page {
         Column {
             Label {
                 id: curlocTextLon
-                text: roundNumber(positionSource.position.coordinate.longitude, 5) + "º"
+                text: (roundNumber(positionSource.position.coordinate.longitude, 5) || i18n.tr("No fix")) + "º"
                 font.pointSize: marginVal * 3
             }
 
@@ -218,11 +220,13 @@ Page {
             var distance = Math.round(positionSource.position.coordinate.distanceTo(compassPage.coord1)) + " m"
             var azimuth = Math.round(positionSource.position.coordinate.azimuthTo(compassPage.coord1))
 
-            compassui.setBearing(azimuth)
+            if (compass.reading != null){
+                compassui.setDirection(compass.reading.azimuth)
+            }
             distanceText.text = distance
             degreeText.text = Math.round(azimuth) + "°"
 
-            compassui.setDirection(Math.floor(azimuth))
+            compassui.setBearing(Math.floor(azimuth))
         }
     }
 
@@ -230,10 +234,6 @@ Page {
         id: compass
         active: true
         alwaysOn: true
-
-        onReadingChanged: {
-            console.log("Compass.azimuth: " + reading.azimuth)
-        }
     }
 
     Component.onCompleted: {
@@ -245,6 +245,11 @@ Page {
         id: positionSource
         active: true
         preferredPositioningMethods: PositionSource.SatellitePositioningMethods
+    }
+
+    Compass {
+        id: compassSensor
+        active: true
     }
 
     Dialog {

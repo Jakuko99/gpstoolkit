@@ -133,7 +133,7 @@ ApplicationWindow {
                 //                Layout.fillWidth: true
                 Label {
                     id: latLabel
-                    text: roundNumber(geoposition.position.coordinate.latitude, 5)  + "º"
+                    text: (roundNumber(geoposition.position.coordinate.latitude, 5) || i18n.tr("No fix"))  + "º"
                     font.pointSize: marginVal * 3
                 }
 
@@ -148,7 +148,7 @@ ApplicationWindow {
                 //                Layout.fillWidth: true
                 Label {
                     id: lonLabel
-                    text: roundNumber(geoposition.position.coordinate.longitude,5) + "º"
+                    text: (roundNumber(geoposition.position.coordinate.longitude,5) || i18n.tr("No fix")) + "º"
                     font.pointSize: marginVal * 3
                 }
 
@@ -161,7 +161,7 @@ ApplicationWindow {
 
             Column {
                 Label {
-                    text: roundNumber(geoposition.position.coordinate.altitude, 1) + " m"
+                    text: (roundNumber(geoposition.position.coordinate.altitude, 1) || i18n.tr("No fix")) + " m"
                     font.pointSize: marginVal * 3
                 }
 
@@ -173,7 +173,7 @@ ApplicationWindow {
 
             Column {
                 Label {
-                    text: "± " + roundNumber(geoposition.position.horizontalAccuracy, 1) + " m"
+                    text: "± " + (roundNumber(geoposition.position.horizontalAccuracy, 1) || i18n.tr("No fix")) + " m"
                     font.pointSize: marginVal * 3
                 }
 
@@ -185,7 +185,7 @@ ApplicationWindow {
 
             Column {
                 Label {
-                    text: roundNumber(geoposition.position.speed * 3.6, 1) + " km/h"
+                    text: (roundNumber(geoposition.position.speed * 3.6, 1) || i18n.tr("0")) + " km/h"
                     font.pointSize: marginVal * 3
                 }
 

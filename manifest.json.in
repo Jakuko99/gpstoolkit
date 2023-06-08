@@ -9,7 +9,7 @@
             "desktop":  "gpstoolkit.desktop"
         }
     },
-    "version": "0.1.2",
+    "version": "0.1.3",
     "maintainer": "Jakub Krsko <jakubkrs@outlook.sk>",
     "framework" : "@CLICK_FRAMEWORK@"
 }
