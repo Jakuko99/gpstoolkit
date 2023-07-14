@@ -208,7 +208,7 @@ Page {
         id: compassTimer
         running: true
         repeat: true
-        interval: 1000
+        interval: 100
 
         onTriggered: {
             if(isNaN(positionSource.position.coordinate.longitude) || isNaN(positionSource.position.coordinate.latitude))
@@ -382,6 +382,7 @@ Page {
                                 if (!isNaN(aux_lat) && aux_lat.toString().indexOf('.') != -1 && !isNaN(aux_lng) && aux_lng.toString().indexOf('.') != -1 && aux_lat >= -90 && aux_lat <= 90 && aux_lng >= -180 && aux_lng <= 180) { // It's a float
                                     updateScreen(aux_lat, aux_lng);
                                 }
+                                setPositionDialog.close();
                             }
                             catch(e){
                                 console.log("Error when entering coordinates: " + e)
@@ -581,6 +582,7 @@ Page {
                                         updateScreen(aux_lat, aux_lng);
                                     }
                                 }
+                                setPositionDialog.close();
                             }
                             catch(e){
                                 console.log("Error when entering coordinates: " + e)

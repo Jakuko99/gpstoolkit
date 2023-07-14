@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-08 06:21+0000\n"
-"PO-Revision-Date: 2023-06-08 09:42+0300\n"
-"Last-Translator: Jakub Krško <jakubkrs@outlook.sk>\n\n"
+"PO-Revision-Date: 2023-07-14 08:05+0200\n"
+"Last-Translator: Jakub Krško <jakubkrs@outlook.sk>\n"
 "Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../qml/Main.qml:95 ../qml/Main.qml:205
 msgid "QTH Locator"
@@ -37,7 +37,7 @@ msgstr "O aplikácií"
 #: ../qml/Main.qml:176 ../qml/compass_page.qml:149 ../qml/compass_page.qml:161
 #: ../qml/compass_page.qml:183 ../qml/compass_page.qml:196
 msgid "No fix"
-msgstr "bez GPS"
+msgstr "Bez GPS"
 
 #: ../qml/Main.qml:141
 msgid "Latitude"
@@ -65,7 +65,7 @@ msgstr "Rýchlosť"
 
 #: ../qml/Main.qml:217
 msgid "Last updated: "
-msgstr "Posledná aktualizácia"
+msgstr "Posledná aktualizácia "
 
 #: ../qml/aboutPage.qml:69 gpstoolkit.desktop.in.h:1
 msgid "GPS Toolkit"
@@ -182,7 +182,7 @@ msgstr "Vzdialenosť medzi QTH lokátormi"
 
 #: ../qml/conversion_page.qml:109
 msgid "QTH from: "
-msgstr "QTH z:"
+msgstr "QTH z "
 
 #: ../qml/conversion_page.qml:124
 msgid "QTH to:      "
@@ -210,7 +210,7 @@ msgstr "Previesť na lokátor"
 
 #: ../qml/maiden_locator.qml:201 ../qml/maiden_locator.qml:411
 msgid "QTH Locator:"
-msgstr "Lokátor"
+msgstr "Lokátor:"
 
 #: ../qml/maiden_locator.qml:436
 msgid "QTH:"
@@ -234,7 +234,7 @@ msgstr "Vypočítať vzdialenosť"
 
 #: ../qml/maiden_locator.qml:556
 msgid "Calculated distance:"
-msgstr "Vypočítaná vzdialenosť"
+msgstr "Vypočítaná vzdialenosť:"
 
 #: ../qml/maiden_locator.qml:577
 msgid "Error message"

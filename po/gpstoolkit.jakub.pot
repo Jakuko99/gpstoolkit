@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-08 06:21+0000\n"
+"POT-Creation-Date: 2023-07-14 05:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,8 +34,8 @@ msgid "About"
 msgstr ""
 
 #: ../qml/Main.qml:136 ../qml/Main.qml:151 ../qml/Main.qml:164
-#: ../qml/Main.qml:176 ../qml/compass_page.qml:149 ../qml/compass_page.qml:161
-#: ../qml/compass_page.qml:183 ../qml/compass_page.qml:196
+#: ../qml/Main.qml:176 ../qml/compass_page.qml:161 ../qml/compass_page.qml:183
+#: ../qml/compass_page.qml:196
 msgid "No fix"
 msgstr ""
 
@@ -55,7 +55,7 @@ msgstr ""
 msgid "Accuracy"
 msgstr ""
 
-#: ../qml/Main.qml:188
+#: ../qml/Main.qml:188 ../qml/compass_page.qml:149
 msgid "0"
 msgstr ""
 
@@ -127,7 +127,7 @@ msgid "Current longitude"
 msgstr ""
 
 #: ../qml/compass_page.qml:263 ../qml/compass_page.qml:367
-#: ../qml/compass_page.qml:539
+#: ../qml/compass_page.qml:540
 msgid "Set destination"
 msgstr ""
 
@@ -143,12 +143,12 @@ msgstr ""
 msgid "Sexagesimal"
 msgstr ""
 
-#: ../qml/compass_page.qml:335 ../qml/compass_page.qml:404
+#: ../qml/compass_page.qml:335 ../qml/compass_page.qml:405
 #: ../qml/maiden_locator.qml:142 ../qml/maiden_locator.qml:222
 msgid "Lat:"
 msgstr ""
 
-#: ../qml/compass_page.qml:352 ../qml/compass_page.qml:472
+#: ../qml/compass_page.qml:352 ../qml/compass_page.qml:473
 #: ../qml/maiden_locator.qml:159 ../qml/maiden_locator.qml:290
 msgid "Long:"
 msgstr ""
