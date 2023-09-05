@@ -3,89 +3,90 @@
 # This file is distributed under the same license as the gpstoolkit.jakub package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: gpstoolkit.jakub\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-14 06:11+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-09-05 21:26+0200\n"
+"Last-Translator: Jakub Krško <jakubkrs@outlook.sk>\n"
+"Language-Team: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../qml/Main.qml:95 ../qml/Main.qml:205
 msgid "QTH Locator"
-msgstr ""
+msgstr "Lokátor"
 
 #: ../qml/Main.qml:99 ../qml/compass_page.qml:57
 msgid "Compass navigation"
-msgstr ""
+msgstr "Kompasová navigace"
 
 #: ../qml/Main.qml:108 ../qml/map_page.qml:25
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #: ../qml/Main.qml:112
 msgid "About"
-msgstr ""
+msgstr "O aplikaci"
 
 #: ../qml/Main.qml:136 ../qml/Main.qml:151 ../qml/Main.qml:164
 #: ../qml/Main.qml:176 ../qml/compass_page.qml:161 ../qml/compass_page.qml:183
 #: ../qml/compass_page.qml:196
 msgid "No fix"
-msgstr ""
+msgstr "Bez GPS"
 
 #: ../qml/Main.qml:141
 msgid "Latitude"
-msgstr ""
+msgstr "Zeměpisná šířka"
 
 #: ../qml/Main.qml:156
 msgid "Longitude"
-msgstr ""
+msgstr "Zeměpisná délka"
 
 #: ../qml/Main.qml:169
 msgid "Altitude"
-msgstr ""
+msgstr "Nadmořská výška"
 
 #: ../qml/Main.qml:181 ../qml/compass_page.qml:166
 msgid "Accuracy"
-msgstr ""
+msgstr "Přesnost"
 
 #: ../qml/Main.qml:188 ../qml/compass_page.qml:149
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../qml/Main.qml:193 ../qml/compass_page.qml:154
 msgid "Speed"
-msgstr ""
+msgstr "Rychlost"
 
 #: ../qml/Main.qml:217
 msgid "Last updated: "
-msgstr ""
+msgstr "Poslední aktualizace:"
 
 #: ../qml/aboutPage.qml:69 gpstoolkit.desktop.in.h:1
 msgid "GPS Toolkit"
-msgstr ""
+msgstr "GPS Toolkit"
 
 #: ../qml/aboutPage.qml:80
 msgid "Version %1"
-msgstr ""
+msgstr "Verze %1"
 
 #: ../qml/aboutPage.qml:94
 msgid "Get the source"
-msgstr ""
+msgstr "Získat zdrojový kód"
 
 #: ../qml/aboutPage.qml:103
 msgid "Report issues"
-msgstr ""
+msgstr "Nahlásiť chybu"
 
 #: ../qml/aboutPage.qml:114
 msgid "Acknowledgements:"
-msgstr ""
+msgstr "Poděkování:"
 
 #: ../qml/aboutPage.qml:123
 msgid ""
@@ -93,150 +94,153 @@ msgid ""
 "was copied from Geocaching for UT by evilbunny2008, both apps are available "
 "in OpenStore."
 msgstr ""
+"Souřadnicový picker byl zkopírován z uNav od Costales, kompasová komponenta "
+"byla zkopírována z Geocaching for UT od evilbunny2008, obě aplikace jsou k "
+"dispozici v OpenStore."
 
 #: ../qml/compass_page.qml:74
 msgid "Set position"
-msgstr ""
+msgstr "Nastavit pozici"
 
 #: ../qml/compass_page.qml:98 ../qml/compass_page.qml:110
 msgid "Not set"
-msgstr ""
+msgstr "Není nastaveno"
 
 #: ../qml/compass_page.qml:103
 msgid "Destination latitude"
-msgstr ""
+msgstr "Zeměpisná šířka cíle"
 
 #: ../qml/compass_page.qml:116
 msgid "Destination longitude"
-msgstr ""
+msgstr "Zeměpisná délka cíle"
 
 #: ../qml/compass_page.qml:129
 msgid "Destination azimuth"
-msgstr ""
+msgstr "Azimut cíle"
 
 #: ../qml/compass_page.qml:142
 msgid "Destination distance"
-msgstr ""
+msgstr "Vzdálenost do cíle"
 
 #: ../qml/compass_page.qml:188
 msgid "Current latitude"
-msgstr ""
+msgstr "Aktuální zeměpisná šířka"
 
 #: ../qml/compass_page.qml:201
 msgid "Current longitude"
-msgstr ""
+msgstr "Aktuální zeměpisná délka"
 
 #: ../qml/compass_page.qml:263 ../qml/compass_page.qml:367
 #: ../qml/compass_page.qml:540
 msgid "Set destination"
-msgstr ""
+msgstr "Nastavit cíl"
 
 #: ../qml/compass_page.qml:269
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: ../qml/compass_page.qml:287 ../qml/maiden_locator.qml:70
 msgid "Decimal"
-msgstr ""
+msgstr "Decimal"
 
 #: ../qml/compass_page.qml:299 ../qml/maiden_locator.qml:82
 msgid "Sexagesimal"
-msgstr ""
+msgstr "Sexagesimal"
 
 #: ../qml/compass_page.qml:335 ../qml/compass_page.qml:405
 #: ../qml/maiden_locator.qml:142 ../qml/maiden_locator.qml:222
 msgid "Lat:"
-msgstr ""
+msgstr "Šířka:"
 
 #: ../qml/compass_page.qml:352 ../qml/compass_page.qml:473
 #: ../qml/maiden_locator.qml:159 ../qml/maiden_locator.qml:290
 msgid "Long:"
-msgstr ""
+msgstr "Délka:"
 
 #: ../qml/conversion_page.qml:29
 msgid "Unit conversions"
-msgstr ""
+msgstr "Převody jednotek"
 
 #: ../qml/conversion_page.qml:55
 msgid "Coordinate conversions"
-msgstr ""
+msgstr "Převody souřadnic"
 
 #: ../qml/conversion_page.qml:64 ../qml/maiden_locator.qml:469
 msgid "Latitude:"
-msgstr ""
+msgstr "Zeměpisná šířka:"
 
 #: ../qml/conversion_page.qml:75 ../qml/maiden_locator.qml:480
 msgid "Longitude:"
-msgstr ""
+msgstr "Zeměpisná délka:"
 
 #: ../qml/conversion_page.qml:88
 msgid "Convert"
-msgstr ""
+msgstr "Převést"
 
 #: ../qml/conversion_page.qml:102
 msgid "Maidenhead (QTH) Locator Distance"
-msgstr ""
+msgstr "Lokátorová vzdálenost"
 
 #: ../qml/conversion_page.qml:109
 msgid "QTH from: "
-msgstr ""
+msgstr "Lokátor z:"
 
 #: ../qml/conversion_page.qml:124
 msgid "QTH to:      "
-msgstr ""
+msgstr "Lokátor do:"
 
 #: ../qml/conversion_page.qml:138
 msgid "Calculate"
-msgstr ""
+msgstr "Vypočítat"
 
 #: ../qml/maiden_locator.qml:42
 msgid "Maidenhead (QTH) Locator"
-msgstr ""
+msgstr "Lokátor Maidenhead (QTH)"
 
 #: ../qml/maiden_locator.qml:94
 msgid "QTH"
-msgstr ""
+msgstr "Lokátor"
 
 #: ../qml/maiden_locator.qml:106
 msgid "QTH dist"
-msgstr ""
+msgstr "Lokátorová vzdálenost"
 
 #: ../qml/maiden_locator.qml:174 ../qml/maiden_locator.qml:357
 msgid "Convert to QTH Locator"
-msgstr ""
+msgstr "Převést na QTH Locator"
 
 #: ../qml/maiden_locator.qml:201 ../qml/maiden_locator.qml:411
 msgid "QTH Locator:"
-msgstr ""
+msgstr "Lokátor:"
 
 #: ../qml/maiden_locator.qml:436
 msgid "QTH:"
-msgstr ""
+msgstr "Lokátor:"
 
 #: ../qml/maiden_locator.qml:451
 msgid "Convert to coordinates"
-msgstr ""
+msgstr "Převést na souřadnice"
 
 #: ../qml/maiden_locator.qml:501
 msgid "QTH 1:"
-msgstr ""
+msgstr "Lokátor 1:"
 
 #: ../qml/maiden_locator.qml:518
 msgid "QTH 2:"
-msgstr ""
+msgstr "Lokátor 2:"
 
 #: ../qml/maiden_locator.qml:533
 msgid "Calculate distance"
-msgstr ""
+msgstr "Vypočítat vzdálenost"
 
 #: ../qml/maiden_locator.qml:556
 msgid "Calculated distance:"
-msgstr ""
+msgstr "Vypočtená vzdálenost:"
 
 #: ../qml/maiden_locator.qml:577
 msgid "Error message"
-msgstr ""
+msgstr "Chybová zpráva"
 
 #: ../qml/map_page.qml:58
 msgid "Map feature will be added later"
-msgstr ""
+msgstr "Funkce mapy bude přidána později"
