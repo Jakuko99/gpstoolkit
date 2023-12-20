@@ -9,7 +9,7 @@
             "desktop":  "gpstoolkit.desktop"
         }
     },
-    "version": "0.1.4f",
+    "version": "0.1.5f",
     "maintainer": "Jakub Krsko <jakubkrs@outlook.sk>",
     "framework" : "ubuntu-sdk-20.04"
 }
