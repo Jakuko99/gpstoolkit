@@ -16,7 +16,7 @@
 
 import QtQuick 2.9
 import QtQuick.Window 2.3
-import Ubuntu.Components 1.3 as Ubuntu
+import Lomiri.Components 1.3 as Ubuntu
 import QtPositioning 5.2
 import QtQuick.Controls.Suru 2.2
 import QtQuick.Controls 2.2

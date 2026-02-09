@@ -1,5 +1,5 @@
 import QtQuick 2.6
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
 import Qt.labs.settings 1.0
@@ -259,7 +259,7 @@ Page {
                         width: units.gu(1)
                     }
 
-                    UbuntuShape {
+                    LomiriShape {
                         width: units.gu(4)
                         height: lat2c.height
                         backgroundColor: lat2dMouseArea.pressed ? theme.palette.normal.activity : theme.palette.normal.foreground
@@ -327,7 +327,7 @@ Page {
                         width: units.gu(1)
                     }
 
-                    UbuntuShape {
+                    LomiriShape {
                         width: units.gu(4)
                         height: lng2c.height
                         backgroundColor: lng2dMouseArea.pressed ? theme.palette.normal.activity : theme.palette.normal.foreground
